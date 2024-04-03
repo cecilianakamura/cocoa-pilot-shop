@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <!-- Other project details -->
+
+    <parent>
+        <groupId>com.yourcompany</groupId>
+        <artifactId>cocoa-pilot-shop</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+  <modules>
+    <module>Product</module>
+    <module>Category</module>
+  </modules>
+
+  <properties>
+    <!-- Define Spring Boot version -->
+    <spring.boot.version>2.5.4</spring.boot.version>
+    <!-- Define PostgreSQL driver version -->
+    <postgresql.version>42.2.24</postgresql.version>
+  </properties>
+
+  <dependencies>
+    <!-- Spring Boot dependencies -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>${spring.boot.version}</version>
+    </dependency>
+    <!-- Add PostgreSQL driver dependency -->
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>${postgresql.version}</version>
+    </dependency>
+    <!-- Other dependencies -->
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!-- Spring Boot Maven plugin -->
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>${spring.boot.version}</version>
+      </plugin>
+      <!-- Other plugins -->
+    </plugins>
+  </build>
+
+</project>
